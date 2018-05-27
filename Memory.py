@@ -9,7 +9,12 @@ KiB Swap:        0 total,        0 used,        0 free.  2119560 cached Mem """
 if "KiB Mem" in output:
     match=re.search('KiB Mem:\s+([0-9]+) total,\s+([0-9]+) used,\s+([0-9]+) free,',  output)
     if match:
-        print("memory Usage: %s %s %s"%(match.group(1),match.group(2),match.group(3)))
+        mem_threshold = int(match.group(3)) / int(match.group(1))*100
+        print (mem_threshold)
+        if(mem_threshold > 30) :
+            print("pass: memory Usage: %s %s %s"%(match.group(1),match.group(2),match.group(3)))
+        else :
+            print ("test fail memory is too high")
     else:
         print("testFailed... Could not find memory output")
 else:
