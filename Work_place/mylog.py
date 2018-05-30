@@ -11,7 +11,7 @@ def printlog(logfile, search_word, pre_rowcount, next_rowcount):
         print "-" * 70
         print "Log file: " , logfile
         print "Find this word: ", search_word
-#       print index  #number of character not line
+        #print index  #number of character not line 590
         print "-" * 70
 
         print get_log_data(logdata, index, pre_rowcount, next_rowcount)
@@ -21,7 +21,7 @@ def get_log_data(logdata,start_index, pre_rowcount, next_rowcount) :
     enter_index = max(0,logdata.rfind("\n", 0, start_index ))
     for i in range(0, pre_rowcount):
         enter_index= max(0,logdata.rfind("\n", 0, enter_index ))
-
+#        print enter_index
 
     enter_index2 = logdata.find("\n", start_index, len(logdata))
     for i in range(0, next_rowcount):
