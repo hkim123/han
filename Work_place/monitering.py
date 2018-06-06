@@ -1,5 +1,6 @@
 #!/usr/bin/python
 #monitoring log shows alarm when search string (err or fail) find
+#add color when alert happen
 from faillog_recent import get_log_data
 from time import sleep
 import os
