@@ -33,6 +33,7 @@ def check(file_name, search_word) :
 
 def alert() :
     print "\n", datetime.datetime.now(), "ERROR ERROR !!!!!!"
-
+#    print datetime.datetime.now(), "ERROR ERROR !!!!!!"
+    
 if __name__ == "__main__":
-    check("/var/log/system.log", "err")
+    check("/var/log/syslog", "han")
