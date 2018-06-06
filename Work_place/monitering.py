@@ -6,6 +6,12 @@ import os
 import sys
 import datetime
 
+
+#color
+errcolor_fatal= '\033[31m'
+errcolor_none = '\033[0m'
+errcolor_except = '\x1b[36m'
+
 def check(file_name, search_word) :
     if os.path.exists(file_name):
         print "start monitoring: ", file_name
@@ -22,7 +28,7 @@ def check(file_name, search_word) :
         fp.close()
 
         if index >=0 :
-            alert()
+            alert(search_word)
             (data,count) = get_log_data(file_data, search_word, index, 2, 2)
             print data
         else :
@@ -31,8 +37,13 @@ def check(file_name, search_word) :
             index = len(file_data)
             sleep(5)
 
-def alert() :
-    print "\n", datetime.datetime.now(), "ERROR ERROR !!!!!!"
+def alert(search_word) :
+    now = datetime.datetime.now()
+    if search_word == "FATAL" :
+        print errcolor_fatal + "\n", now, "Alert ERROR !!!!" +errcolor_none
+    elif search_word == "except" :
+
+        print errcolor_except +"\n", now, "ERROR ERROR !!!!!!" +errcolor_none
 
 if __name__ == "__main__":
-    check("/var/log/system.log", "err")
+    check("/var/log/system.log", "FATAL")
