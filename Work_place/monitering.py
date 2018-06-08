@@ -1,5 +1,6 @@
 #!/usr/bin/python
 #monitoring log shows alarm when search string (err or fail) find
+#add color when alert happen
 from faillog_recent import get_log_data
 from time import sleep
 import os
@@ -27,16 +28,15 @@ def check(file_name, search_word) :
         index = file_data.find(search_word, index)
         fp.close()
 
-        if index >=0 :
+        if  index >=0 :
             alert(search_word)
             (data,count) = get_log_data(file_data, search_word, index, 2, 2)
             print data
         else :
             sys.stdout.write(".....")
             sys.stdout.flush()
-            index = len(file_data)
-            sleep(5)
-
+        index = len(file_data)
+        sleep(5)
 def alert(search_word) :
     now = datetime.datetime.now()
     if search_word == "FATAL" :
@@ -46,4 +46,4 @@ def alert(search_word) :
         print errcolor_except +"\n", now, "ERROR ERROR !!!!!!" +errcolor_none
 
 if __name__ == "__main__":
-    check("/var/log/system.log", "FATAL")
+    check("/var/log/syslog", "FATAL")
