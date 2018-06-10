@@ -33,7 +33,7 @@ def check(file_name, search_word, out_file_name) :
             (data,count) = get_log_data(file_data, search_word, index, 2, 2)
             
             out_file = open(out_file_name, "a")
-	    out_file.write("\n" + ("*" * 70) )
+	        out_file.write("\n" + ("*" * 70) )
             out_file.write("\n start time when happen ("+search_word+"): " )
             out_file.write(str(datetime.datetime.now()))
             out_file.write("\n" + ("-" * 70) + "\n")
