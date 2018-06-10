@@ -1,0 +1,6 @@
+May 28 00:04:18 Hans-MacBook-Pro-2 kcm[16195]: DEPRECATED USE in libdispatch client: Setting timer interval to 0 requests a 1ns timer, did you mean FOREVER (a one-shot timer)?
+May 28 00:04:18 Hans-MacBook-Pro-2 TouchBarServer[237]: 520093.249 [DFR] ERR [_DFRDisplayUsbRecvComplete] failed 0xe00002ed
+May 28 00:04:18 Hans-MacBook-Pro-2 TouchBarServer[237]: 520093.250 [DFR] ERR [_DFRDisplayUsbSendComplete] writePipeAsync failed 0xe00002ed
+May 28 00:04:18 Hans-MacBook-Pro-2 TouchBarServer[237]: 520093.252 [DFR] [deviceTerminate]
+May 28 00:04:18 Hans-MacBook-Pro-2 TouchBarServer[237]: 520093.253 [DFR] [_DFRDisplayDeviceRemoved]
+May 28 00:04:18 Hans-MacBook-Pro-2 TouchBarServer[237]: 520093.253 [DFR] [_DFRDisplayDeviceRemoved_block_invoke] calling client detach callback
