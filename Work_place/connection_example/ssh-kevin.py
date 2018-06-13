@@ -22,7 +22,7 @@ def main():
     print("Connecting to quagga device {} ".format(server))
     proc = pexpect.spawn('ssh -o CheckHostIP=no -o StrictHostKeyChecking=no {}@{}'.format(username, server))
     proc.logfile = sys.stdout
-    log.info(proc.after)
+#    log.info(proc.after)
 #    proc.logfile = os.fdopen (sys.stdout.fileno(),"w",0)
 #    sys.stdout = open ("ssh_result.txt","w")
 #    proc.expect(['password:'], timeout=10)
