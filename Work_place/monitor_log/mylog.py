@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#find fail from the log and display before and after lines, It works with exec_mylog.py
+#find fail from the log and display before and after lines, It works with exec_mylog.py, run ./exec_mylog
 def printlog(logfile, search_word, pre_rowcount, next_rowcount):
     f = open(logfile)
     logdata = f.read()
