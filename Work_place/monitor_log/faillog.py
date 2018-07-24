@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#this script for find fail from the log and display before and after lines, It works with exec_failing_argu4.py
+#this script for find fail from the log and display before and after lines, It works with exec_failing_argu4.py, run ./exec_failing_argu4.py
 
 def printlog(logfile, search_word, pre_rowcount, next_rowcount):
     f = open(logfile)

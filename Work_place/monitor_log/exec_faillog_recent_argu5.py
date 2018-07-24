@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#find fail from the log and display before and after lines but it start look at from half to end.
+#find fail from the log and display before and after lines but it start look at from half to end.it works with faillog_recent.py
 
 import faillog_recent
 import os
