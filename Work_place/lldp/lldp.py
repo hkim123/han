@@ -50,21 +50,40 @@ print (remote_int)
 print (vlan_info)
 print (link_agg)
 
-print ("%15s%15s" % ('Local_interface','Remote_interface'))
-print ("---" * 20)
-print ("Local_interface" ," " * 25 ,"Remote_interface")
-print ("---" * 20)
+# print ("%s%20s" % ('Local_interface','Remote_interface'))
+# print ("{0:15s}{1:15s}".format('local_int','remote_int'))
+# print ("---" * 20)
+# print ("Local_interface" ," " * 25 ,"Remote_interface")
+# print ("---" * 20)
 
-print("%15s%15s" % ('Local_int','Remote_int'))
-print("%15s%15s" % ('=========','=========='))
-#row_list = []
+# print("%15s%15s" % ('Local_int','Remote_int'))
+# print("%15s%15s" % ('=========','=========='))
+# #row_list = []
+# for (local_inf, remote_inf) in zip(local_int, remote_int):
+# 	print("%15s%15s" % (local_inf, remote_inf))
+
+print ("{0:>15s}{1:>15s}".format('local_int','remote_int'))
+print ("{0:>15s}{1:>15s}".format('=========','=========='))
+
 for (local_inf, remote_inf) in zip(local_int, remote_int):
-	print("%15s%15s" % (local_inf, remote_inf))
+	print("{0:>15s}{1:>15s}".format(local_inf,remote_inf))
 
-# for (kernel_port, hw_port, logical_port, bcm_port) in zip(kernel_intf_list, hw_port_list, logical_port_list,bcm_port_list):
-# 	print("%15s%15s%15s%15s" % (kernel_port, hw_port, logical_port, bcm_port))
+
+# print ("{0:10}".format('test'))
+# print ("{0:<10}".format('test'))
+# print("%s"%('test'))
 #
-# for item in local_int :
-#     print (item)
-# for item1 in remote_int:
-#     print (item1)
+# print ("{0:>10}".format('test'))
+#
+# #print("%s"%('test'))
+# print("%10s"%('test'))
+#
+# print ("{0:<15} Python!!".format('hello'))
+# print ("%6s Python!!" %"hello")
+# print ("{0:^10}".format('hello'))
+
+
+# alist = ['a1', 'a2', 'a3']
+#
+# for i, a in enumerate(alist):
+#     print (i, a)
