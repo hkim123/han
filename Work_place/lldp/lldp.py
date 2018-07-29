@@ -54,7 +54,17 @@ print ("%15s%15s" % ('Local_interface','Remote_interface'))
 print ("---" * 20)
 print ("Local_interface" ," " * 25 ,"Remote_interface")
 print ("---" * 20)
-for item in local_int :
-    print (item)
-for item1 in remote_int:
-    print (item1)
+
+print("%15s%15s" % ('Local_int','Remote_int'))
+print("%15s%15s" % ('=========','=========='))
+#row_list = []
+for (local_inf, remote_inf) in zip(local_int, remote_int):
+	print("%15s%15s" % (local_inf, remote_inf))
+
+# for (kernel_port, hw_port, logical_port, bcm_port) in zip(kernel_intf_list, hw_port_list, logical_port_list,bcm_port_list):
+# 	print("%15s%15s%15s%15s" % (kernel_port, hw_port, logical_port, bcm_port))
+#
+# for item in local_int :
+#     print (item)
+# for item1 in remote_int:
+#     print (item1)
