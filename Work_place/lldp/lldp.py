@@ -427,8 +427,8 @@ Interface:    e101-018-4, via: LLDP, RID: 6, Time: 0 day, 00:40:40
   VLAN:         7 bnd7.7
 -------------------------------------------------------------------------------
   '''
-#local_int =[]
 
+#output = subprocess.check_output(["lldpctl"])
 local_int = re.findall('Interface:\s+(e\d+-\d+-\d*)', output)
 remote_int = re.findall('ifname\s+(e\d+-\d+-\d)',output)
 remote_ip = re.findall('MgmtIP:\s+(\d+.\d+.\d+.\d+)',output)
