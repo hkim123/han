@@ -42,11 +42,13 @@ Interface:    e101-002-1, via: LLDP, RID: 2, Time: 0 day, 20:29:41
 
 local_int = re.findall('Interface:\s+(e\d+-\d+-\d*)', output)
 remote_int = re.findall('ifname\s+(e\d+-\d+-\d)',output)
+remote_ip = re.findall('MgmtIP:\s+(\d+.\d+.\d+.\d+)',output)
 vlan_info = re.findall('VLAN:\s+(\d)',output)
 link_agg = re.findall('(bnd\d.\d)',output)
 #print ("local_interface: ", local_int.group())
 print (local_int)
 print (remote_int)
+print(remote_ip)
 print (vlan_info)
 print (link_agg)
 
@@ -62,11 +64,11 @@ print (link_agg)
 # for (local_inf, remote_inf) in zip(local_int, remote_int):
 # 	print("%15s%15s" % (local_inf, remote_inf))
 
-print ("{0:>15s}{1:>15s}".format('local_int','remote_int'))
-print ("{0:>15s}{1:>15s}".format('=========','=========='))
+print ("{0:>15s}{1:>15s}{2:>15s}".format('local_int','remote_int','remote_ip'))
+print ("{0:>15s}{1:>15s}{2:>15s}".format('=========','==========','=========='))
 
-for (local_inf, remote_inf) in zip(local_int, remote_int):
-	print("{0:>15s}{1:>15s}".format(local_inf,remote_inf))
+for (local_inf, remote_inf, remote_ip) in zip(local_int, remote_int, remote_ip):
+	print("{0:>15s}{1:>15s}{2:>15s}".format(local_inf, remote_inf, remote_ip))
 
 
 # print ("{0:10}".format('test'))
