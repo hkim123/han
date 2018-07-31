@@ -1,5 +1,6 @@
 import subprocess
 import re
+import commands
 
 output = '''
 -------------------------------------------------------------------------------
@@ -429,6 +430,10 @@ Interface:    e101-018-4, via: LLDP, RID: 6, Time: 0 day, 00:40:40
   '''
 
 #output = subprocess.check_output(["lldpctl"])
+
+#단순히 command 만 보내서 output 을 얻기 위해서는 command가 subprocess 보다 훨씬 더 낮다. subprocess 는 process 가 crash 된경우는 동작하지 않는다.
+#output = commands.getoutput('lldpctl')
+
 local_int = re.findall('Interface:\s+(e\d+-\d+-\d*)', output)
 remote_int = re.findall('ifname\s+(e\d+-\d+-\d)',output)
 remote_ip = re.findall('MgmtIP:\s+(\d+.\d+.\d+.\d+)',output)
