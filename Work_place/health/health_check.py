@@ -159,6 +159,5 @@ print("Number of OSPF Neighbor : ",ospf_1.group(1))
 if ospf_1.group(1) == '6' :
     print("PASS !!!!!!   OSPF neighbor is 6",'\n')
 else :
-    print(failwarning)
     cprint("FAIL >>>>>>  FAIL >>>>  FAIL >>>>>>> OSPF neighbor is NOT 6",'yellow',attrs=['blink'])
-    print(normal)
+    print('\n')
