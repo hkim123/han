@@ -131,14 +131,13 @@ child.expect(PROMPT)
 bgp_output = ('\n'.join(child.before.strip().splitlines()[1:]))
 #print(bgp_output)
 bgp_1 = re.search('Count:\s(\d+)',bgp_output)
-print("Number of BGP Neighbor : ",bgp_1.group(1))
+print("Number of BGP Neighbor : ",bgp_1.group(1),'\n')
 
 if bgp_1.group(1) == '8':
     print("PASS !!!! BGP neighbor is 8",'\n' )
 else:
-    print(failwarning)
     cprint("FAIL >>>>>>  FAIL >>>>  FAIL >>>>>>> BGP neighbor is NOT 8",'yellow',attrs=['blink'])
-    print(normal)
+    print('\n')
 
 print('#################################################')
 print('Check OSPFv2 neighborship ............')
@@ -154,7 +153,7 @@ child.expect(PROMPT)
 ospf_output = ('\n'.join(child.before.strip().splitlines()[0:]))
 
 ospf_1 = re.search('Count:\s(\d+)',ospf_output)
-print("Number of OSPF Neighbor : ",ospf_1.group(1))
+print("Number of OSPF Neighbor : ",ospf_1.group(1),'\n')
 
 if ospf_1.group(1) == '6' :
     print("PASS !!!!!!   OSPF neighbor is 6",'\n')
