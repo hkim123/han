@@ -32,3 +32,27 @@ with open('test.txt','rt') as f: #file test.txt file 을 텍스트 읽기모드 
 
 for item, cnt in ct2.most_common(5): #상위 5개 의 값, test.txt file 에서는 o 가 제일 많다. 만약 5 를 제거하면 전체 요소의 갯수를 보여준다.
     print('%s : %2d' %(item,cnt))
+
+print(ct2.most_common()) # 튜플 형태로 출력, 모든 요소의 갯수 출력
+
+#Counter 객체는 산술/집합 연산이 가능하다.
+ct3 = collections.Counter(['a','b','c','b','d','a'])
+ct4 = collections.Counter('aeroplane')
+print(ct3)
+print(ct4)
+print(ct3+ct4)
+print(ct3-ct4)
+print(ct3 & ct4)  #교집합
+print("union", ct3 | ct4)  #합집합
+
+#defaultdic 메서드는 컨테이너를 초기화 만들때 default 값을 지정한다
+
+def default_aa():
+    return "aa"
+
+dic = collections.defaultdict(default_aa,n1 = "hi")
+print(dic)
+print(dic['n1'])
+
+print(dic['n2'])  # n2값이 없으면 aa를 출력한다
+
