@@ -2,6 +2,8 @@ import collections
 print(collections.Counter(['aa','cc','dd','aa','bb','ee']))   #counter 함수를 이용해서 초기화
 print(collections.Counter({"A":3,"B":2,"C":4}))  #자동적으로 많은 것부터 정렬 (C 부터 정렬)
 print(collections.Counter(a=2,b=4,c=1))
+#[collections]
+#Counter : 컨테이너레 동일한 값의 자료가 몇개인지를 파악하는데 사용하는 객체
 
 #추가 하는 방법
 
