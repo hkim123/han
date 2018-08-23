@@ -84,3 +84,33 @@ print ("-------------------------------------")
 gameActor2.die()
 gameActor1.die()
 ########################################################################
+
+
+############### Class Basic #################
+
+class Person :
+    def __init__(self):
+        self.name = ""   #변수를 만들어 준다.
+        self.age = ""
+    def say(self,name,age):
+        self.name = ("my name is : " + name)
+        self.age = ("my age is :" + age)
+        print(self.name)
+        print(self.age)
+
+p2 = Person()
+p2.say("han kim","52")  #method 를 call 할때 argument 를 넣어준다, say method 에서 name,age argument 를 expect 하고 있다
+
+##### 위의 방법을 아래와 같이 할수 있다 ##########
+
+class Person2:
+    def __init__(self,name,age):
+        self.name = name   #들어온 argument(name)을 self.name 에 assign 한다
+        self.age = age
+    def say(self):
+        print("my name is :" + self.name)
+        print("my age is :" + self.age)
+
+p3 = Person2("han kim","52")  #class 를 call 할때 argument 를 넣어준다, 왜냐면. __init__ 에서 name,age argument 를 expect 하고 있다
+p3.say()
+
