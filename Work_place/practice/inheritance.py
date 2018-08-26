@@ -1,4 +1,3 @@
-'''
 class Person:
     def __init__(self,name,age):
         self.name = name
@@ -42,6 +41,5 @@ member = [s, p]
 for aa in member:
     aa.speak()
 
-'''
 
 
