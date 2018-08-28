@@ -20,8 +20,10 @@ print("="*30)
 print("Check next hop..........")
 print("="*30)
 
+cmd = 'hshell -c "l3 multipath show {}"'.format(multi_path.group(0))
+print('CMD = '+cmd)
 
-path = commands.getoutput('hshell -c "l3 multipath show" ' + multi_path.group(0))
+path = commands.getoutput(cmd)
 print(path)
 
 path_1 = path.splitlines()
