@@ -1,3 +1,4 @@
+
 #우선순위 큐 구현하기 (우선 순위에 따라서 item 을 정렬하고,우선순위가 가장 높은 아이템을 pop 하는 큐를 의미
 
 #queue.PriorityQueue 클래스를 이용하여 생성가능(thread 개념을 학습후 사용)
@@ -36,3 +37,5 @@ print(pQ.pop())
 
 print(pQ.pop())
 print(pQ.pop())
+
+
