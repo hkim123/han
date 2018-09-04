@@ -47,7 +47,7 @@ print(ct3-ct4)
 print(ct3 & ct4)  #교집합
 print("union", ct3 | ct4)  #합집합
 
-#defaultdic 메서드는 컨테이너를 초기화 만들때 default 값을 지정한다
+#defaultdic() 함수는 컨테이너를 초기화 만들때 default 값을 지정한다
 
 def default_aa():
     return "aa"

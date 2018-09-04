@@ -43,7 +43,7 @@ name, email, *phone = person_info   #전화번호 2개다 출력된다.
 print(name)
 print(email)
 print(phone)
-
+'''
 
 pointValue = [10, 5, 12, 11, 22, 14, 12, 15, 10, 10, 15, 14, 15]
 *prePoint, curPoint = pointValue   # *preValue 앞에 * 이 있어니, 마지막 하나까지의 요소를 뜻한다.
@@ -51,7 +51,7 @@ pointValue = [10, 5, 12, 11, 22, 14, 12, 15, 10, 10, 15, 14, 15]
 print(prePoint)
 print(curPoint)
 
-'''
+
 
 ###############################################################
 address = [("우",234, 123), ("도","서울"),("도","경기"),("우",123,234)]
