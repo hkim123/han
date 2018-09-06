@@ -40,6 +40,8 @@ print(max(fruits, key = lambda n: fruits[n]))
 max_val = max(fruits, key = lambda n:fruits[n])
 print(max_val)
 
-#### 같은 값을 가지고 비교하는 경우, 이 경우는 key 값만 가지고 비교한다, 즉 사과의 "ㅅ"이 "ㅇ" 보다 먼저다
+#### 같은 값을 가지고 비교하는 경우, 이 경우는 key 값만 가지고 비교한다, 즉 사과의 "ㅅ"이 "ㅇ" 보다 먼저
 fruits1 = {"사과":300,"오렌지":300}
 print(min(zip(fruits1.values(),fruits1.keys())))
+
+
