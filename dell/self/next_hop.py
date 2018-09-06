@@ -1,7 +1,10 @@
 #!/usr/bin/python
 from __future__ import print_function
 import commands
+<<<<<<< HEAD
 import subprocess
+=======
+>>>>>>> 29ae95516994073d9e934b30fe3fa8cea49753fa
 import re
 
 prefix = raw_input("Please enter prefix: ")

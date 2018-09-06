@@ -36,4 +36,7 @@ next_hop_1 = commands.getoutput('hshell -c "l3 egress show "' + next_hop.group(1
 print(next_hop_1)
 next_hop_2 = commands.getoutput('hshell -c "l3 egress show "' + next_hop.group(2))
 print(next_hop_2)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 29ae95516994073d9e934b30fe3fa8cea49753fa
