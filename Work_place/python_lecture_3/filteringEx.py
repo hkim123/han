@@ -4,7 +4,7 @@ li = [1,10,23,11,-21,4,-11,-3,5]
 
 #list comprehension
 
-print([n for n in li if n > 0])  ### List comprehension
+print([n for n in li if n > 0])  ### List comprehension,양수만 출력
 
 print([n for n in li if n < 0])   ### 음수만 출력
 
