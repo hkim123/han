@@ -1,4 +1,3 @@
-'''
 ## Question1 ##
 
 print("####Question 1####")
@@ -36,7 +35,7 @@ num_4 = temp_2 // 10
 sum = num_1 + num_2 + num_3 + num_4
 
 print("The sum of the digit is ", sum)
-'''
+
 
 ##Questin 4 ##
 
@@ -44,12 +43,7 @@ print("####Question 4####")
 
 weight_kilo = eval(input("Enter weight in pound: ")) * 0.45359237
 height_meter = eval(input("Enter height in inches : ")) * 0.0254
-BMI = int(weight_kilo / height_meter ** 2 * 10000) / 10000.0
-BMI_2 = weight_kilo / height_meter ** 2
-BMI_1 = round(BMI_2,4)
 
-print(weight_kilo)
-print(height_meter)
+BMI = round(weight_kilo / height_meter ** 2 ,4)
+
 print("BMI is", BMI)
-print(BMI_1)
-print(BMI_2)
