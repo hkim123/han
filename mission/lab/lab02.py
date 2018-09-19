@@ -44,6 +44,6 @@ print("####Question 4####")
 weight_kilo = eval(input("Enter weight in pound: ")) * 0.45359237
 height_meter = eval(input("Enter height in inches : ")) * 0.0254
 
-BMI = round(weight_kilo / height_meter ** 2 ,4)
+BMI = round(weight_kilo / height_meter ** 2, 4)
 
 print("BMI is", BMI)
