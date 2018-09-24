@@ -1,20 +1,23 @@
-'''
-## Question 1 ###
 
-#a = int(input("Enter an ASII code: "))
-#chr_1 = chr(a)
-#print("The character is " + chr_1)
+## Question 1 ###
+print("1. Question 1")
+a = int(input("Enter an ASII code: "))
+chr_1 = chr(a)
+print("The character is " + chr_1)
+print("\n")
+
 
 ##Question 2 ##
+print("2. Question 2")
 print(format(57.467657,"9.3f"))
 print(format(12345678.923,"9.1e"))
 print(format(5789.4,"<.2f"))
 print(format(45,"<5d"))
 print(format(0.457467657,"<9.3%"))
-'''
+print("\n")
 
 ##Question3 ##
-
+print("3. Question 3")
 name = input("Enter employee's name: ")
 hour = eval(format(eval(input("Enter number of hours worked in a week: ")),".1f"))
 pay_rate = eval(input("Enter hourly pay rate: "))
@@ -35,6 +38,7 @@ sta_withhold_1 = gross * sta_rate
 Total_dedu = fed_withhold + sta_withhold
 net_pay = gross - (fed_withhold + sta_withhold_1)
 
+print("\n")
 print("Employee name : " + name)
 print("Hours Worked : ",hour)
 print("Pay Rate : " + "$",pay_rate )

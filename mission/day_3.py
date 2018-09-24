@@ -30,12 +30,14 @@ x = 200
 print(id(y))
 print(y)
 
+
+
 print(format(12.34546,".2f"))
 print(format(12.34546,".3f"))
 
 
 x = format(16.4,"10.3f")  #토탈 10
-print(x)  #앞에 space 가 있다. 6개의 스페이스가 있다(16.4 = 4자리)
+print(x)  #앞에 4개의 space 가 있다.(16.400 = 6자리, 3f 이므로 400, 따라서 토탈 10 자리 이므로 4개의 스페이스가 있다)
 x = format(16.4,"<10.3f")
 print(x)
 
